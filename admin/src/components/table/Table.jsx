@@ -10,68 +10,47 @@ import Paper from "@mui/material/Paper";
 const List = () => {
   const rows = [
     {
-      id: 1143155,
-      product: "Acer Nitro 5",
-      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
+      id: 889,
+      product: "phone",
+      img: "https://th.bing.com/th/id/OIP.KwavIwuhhIw20dSqHQA4pAHaHa?pid=ImgDet&rs=1",
+      customer: "K. Smith",
+      date: "10th of March",
       amount: 785,
-      method: "Cash on Delivery",
-      status: "Approved",
+     
     },
     {
-      id: 2235235,
-      product: "Playstation 5",
-      img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Michael Doe",
-      date: "1 March",
+      id: 990,
+      product: "laptop",
+      img: "https://th.bing.com/th/id/R.fd640ebf70eff22c88dad94a4eef3041?rik=L5DZbUP%2b0SQu7Q&riu=http%3a%2f%2fstore.hp.com%2fUKStore%2fHtml%2fMerch%2fImages%2fc05512731_1750x1285.jpg&ehk=v078V0Xw%2bTe2FE8UVA92%2fDUWAJ5XGaNggNTGNoYjq3g%3d&risl=&pid=ImgRaw&r=0",
+      customer: "A.Michael ",
+      date: "2nd of July",
       amount: 900,
-      method: "Online Payment",
-      status: "Pending",
+
     },
     {
-      id: 2342353,
-      product: "Redragon S101",
-      img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
+      id: 878,
+      product: "PC",
+      img: "https://th.bing.com/th/id/R.bd3ce0c59a976c06b1a01f232fc9d78e?rik=yyUosuaBeIILEQ&riu=http%3a%2f%2fcdn1.expertreviews.co.uk%2fsites%2fexpertreviews%2ffiles%2f8%2f93%2fpc_specialist_invictus_0_0.jpg&ehk=NcTwJJHRR9D94UgAaICOfI2jHBg%2fzgH4KW7M%2fHfiAbE%3d&risl=&pid=ImgRaw&r=0",
       customer: "John Smith",
-      date: "1 March",
+      date: "14th of March",
       amount: 35,
-      method: "Cash on Delivery",
-      status: "Pending",
-    },
-    {
-      id: 2357741,
-      product: "Razer Blade 15",
-      img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Jane Smith",
-      date: "1 March",
-      amount: 920,
-      method: "Online",
-      status: "Approved",
-    },
-    {
-      id: 2342355,
-      product: "ASUS ROG Strix",
-      img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Harold Carol",
-      date: "1 March",
-      amount: 2000,
-      method: "Online",
-      status: "Pending",
-    },
+     
+    }
+   
+   
   ];
   return (
     <TableContainer component={Paper} className="table">
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCell">Tracking ID</TableCell>
+            <TableCell className="tableCell"> ID</TableCell>
             <TableCell className="tableCell">Product</TableCell>
             <TableCell className="tableCell">Customer</TableCell>
             <TableCell className="tableCell">Date</TableCell>
             <TableCell className="tableCell">Amount</TableCell>
-            <TableCell className="tableCell">Payment Method</TableCell>
-            <TableCell className="tableCell">Status</TableCell>
+           
+         
           </TableRow>
         </TableHead>
         <TableBody>
@@ -84,13 +63,12 @@ const List = () => {
                   {row.product}
                 </div>
               </TableCell>
+            
               <TableCell className="tableCell">{row.customer}</TableCell>
               <TableCell className="tableCell">{row.date}</TableCell>
               <TableCell className="tableCell">{row.amount}</TableCell>
-              <TableCell className="tableCell">{row.method}</TableCell>
-              <TableCell className="tableCell">
-                <span className={`status ${row.status}`}>{row.status}</span>
-              </TableCell>
+            
+              
             </TableRow>
           ))}
         </TableBody>

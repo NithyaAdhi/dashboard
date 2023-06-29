@@ -10,7 +10,8 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 
 const Navbar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+
+  const {dispatch}= useContext(DarkModeContext);
 
   return (
     <div className="navbar">
@@ -25,10 +26,7 @@ const Navbar = () => {
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon
-              className="icon"
-              onClick={() => dispatch({ type: "TOGGLE" })}
-            />
+            <DarkModeOutlinedIcon className="icon" onClick={() => dispatch({type: "TOGGLE"})}/>
           </div>
           <div className="item">
             <FullscreenExitOutlinedIcon className="icon" />
@@ -46,7 +44,7 @@ const Navbar = () => {
           </div>
           <div className="item">
             <img
-              src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src="https://bbdu.ac.in/wp-content/uploads/2017/07/profile_logo_.jpg"
               alt=""
               className="avatar"
             />

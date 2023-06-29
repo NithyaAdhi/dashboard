@@ -1,15 +1,17 @@
 import "./chart.scss";
+import React, { PureComponent } from "react";
 import {
   AreaChart,
   Area,
   XAxis,
+  YAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
 
 const data = [
-  { name: "January", Total: 1200 },
+  { name: "january", Total: 1200 },
   { name: "February", Total: 2100 },
   { name: "March", Total: 800 },
   { name: "April", Total: 1600 },
@@ -17,11 +19,11 @@ const data = [
   { name: "June", Total: 1700 },
 ];
 
-const Chart = ({ aspect, title }) => {
+const Chart = () => {
   return (
     <div className="chart">
-      <div className="title">{title}</div>
-      <ResponsiveContainer width="100%" aspect={aspect}>
+      <div className="title">Last 6 Months(Revenue)</div>
+      <ResponsiveContainer width="100%" aspect={2 / 1}>
         <AreaChart
           width={730}
           height={250}
@@ -34,7 +36,8 @@ const Chart = ({ aspect, title }) => {
               <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <XAxis dataKey="name" stroke="gray" />
+          <XAxis dataKey="name" stroke="grey" />
+          <YAxis />
           <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
           <Tooltip />
           <Area
